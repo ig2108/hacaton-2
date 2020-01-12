@@ -1,0 +1,26 @@
+<section data-id="{{id}}">
+  <div class="poster-wrapper">
+    <img src="{{poster_path}}" alt="movie poster image" width="270">
+  </div>
+  <div class="description-wrapper">
+    <h2 class="film-title">{{title}}</h2>
+    <div class="vote-wrapper">
+      <p class="titles"><span class="vote-average">vote</span>{{vote_average}}</p>
+      <p class="titles"><span class="total-votes">votes</span>{{vote_count}}</p>
+    </div>
+    <p class="titles"><span class="film-popularity">popularity</span>{{popularity}}</p>
+    <p class="titles"><span class="original-film-titles">original title</span>{{original_title}}</p>
+    <p class="title"><span class="film-genre">genre:</span>
+      <ul class="genre-list">
+        {{#each genre_ids}}
+        <li class="genre-list__item">{{this.name}}</li>
+        {{/each}}
+      </ul>
+    </p>
+    <p class="film-description"><span>About</span>{{overview}}</p>
+  </div>
+  <div class="button-wrapper">
+    <button type="button" data-action="watched-films">Add to watched</button>
+    <button type="button" data-action="queue-films">Add to queue</button>
+  </div>
+</section>
