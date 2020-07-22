@@ -1,2 +1,5 @@
-# hacaton-2
-GOIT the second hacaton
+# GOIT the second hacaton
+
+Link to see project
+
+# https://ig2108.github.io/hacaton-2/build/
