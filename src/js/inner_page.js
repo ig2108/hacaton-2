@@ -2,11 +2,12 @@ import * as API from './services/server';
 import filmTemplate from './templates/single-film.hbs';
 import refs from './mainPage';
 import { toggleWatched } from './watched';
+import { toggleQueue } from './queue';
 
 import '../css/styles.css';
 import '../css/film-list.css';
 
-const innerPage = document.querySelector('.add-queue');
+// const innerPage = document.querySelector('.add-queue');
 const film = document.querySelector('.film');
 const filmList = document.querySelector('.article-list');
 const main = document.querySelector('.main');
@@ -22,10 +23,12 @@ function concatGenreNamesBYComa(filmData) {
 }
 
 let addBtn;
+let queueBtn;
 
 function getFullInfo(event) {
   refs.listArticle.innerHTML = ' ';
   refs.listWatch.innerHTML = ' ';
+  refs.queueList.innerHTML = ' ';
   // refs.listWatch.style.gridTemplateRows = '0px';
   refs.searchInput.classList.add('hidden');
   refs.paginationBox.classList.add('hidden');
@@ -36,6 +39,8 @@ function getFullInfo(event) {
     insertMarkup(markup);
     addBtn = document.querySelector('[data-action="watched-films"]');
     addBtn.addEventListener('click', toggleWatched);
+    queueBtn = document.querySelector('[data-action="queue-films"]');
+    queueBtn.addEventListener('click', toggleQueue);
     // removeBtn = document.querySelector('[data-action="del"]');
     // removeBtn.addEventListener('click', upperFnToAdd);
   });

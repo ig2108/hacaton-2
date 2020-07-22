@@ -10,8 +10,8 @@ import refs from './mainPage';
 const list = document.querySelector('#watched_list');
 
 export const toggleWatched = event => {
-  console.log(event.target);
-  console.dir(event.target.textContent);
+  // console.log(event.target);
+  // console.dir(event.target.textContent);
   if (event.target.classList.contains('added')) {
     upperFnToRemove(event);
     event.target.classList.remove('added');
@@ -71,6 +71,7 @@ export const showWatchedFilms = () => {
   refs.listWatch.innerHTML = '';
   refs.filmPage.innerHTML = ' ';
   refs.listArticle.innerHTML = ' ';
+  refs.queueList.innerHTML = ' ';
   refs.searchInput.classList.add('hidden');
   refs.paginationBox.classList.add('hidden');
   refs.navBtns.classList.remove('hidden');

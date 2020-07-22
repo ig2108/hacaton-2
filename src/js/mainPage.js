@@ -6,6 +6,7 @@ import mapper from './mapper';
 import { debounce } from 'debounce';
 import getFullInfo from './inner_page';
 import { showWatchedFilms } from './watched';
+import { showQueueFilms } from './queue';
 
 const refs = {
   articleList: document.querySelector('.article-list'),
@@ -17,6 +18,7 @@ const refs = {
   homeBtn: document.querySelector('[data-action="home"]'),
   libraryBtn: document.querySelector('.js-library'),
   listWatch: document.querySelector('#watched_list'),
+  queueList: document.querySelector('#queue_list'),
   listArticle: document.querySelector('.article-list'),
   filmPage: document.querySelector('#film-page'),
   paginationBox: document.querySelector('.pagination-box'),
@@ -29,10 +31,12 @@ export default refs;
 
 refs.articleList.addEventListener('click', getFullInfo);
 refs.listWatch.addEventListener('click', getFullInfo);
+refs.queueList.addEventListener('click', getFullInfo);
 refs.libraryBtn.addEventListener('click', showWatchedFilms);
 refs.homeBtn.addEventListener('click', fetchArticlesCall);
 document.querySelector('.logo').addEventListener('click', fetchArticlesCall);
 refs.watcheBtn.addEventListener('click', showWatchedFilms);
+refs.queueBtn.addEventListener('click', showQueueFilms);
 
 let page = 1;
 

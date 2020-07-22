@@ -22,3 +22,7 @@ import './styles.css';
 // console.log(filmTemplate);
 
 // innerPage();
+import './js/queue.js';
+
+// import './styles.css';
+// import './queue.css';
