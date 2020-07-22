@@ -72,6 +72,8 @@ export const showWatchedFilms = () => {
   refs.filmPage.innerHTML = ' ';
   refs.listArticle.innerHTML = ' ';
   refs.queueList.innerHTML = ' ';
+  refs.queueBtn.classList.remove('nav-btn-active');
+  refs.watcheBtn.classList.add('nav-btn-active');
   refs.searchInput.classList.add('hidden');
   refs.paginationBox.classList.add('hidden');
   refs.navBtns.classList.remove('hidden');

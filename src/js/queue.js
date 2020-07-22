@@ -95,6 +95,8 @@ export const showQueueFilms = () => {
   refs.filmPage.innerHTML = ' ';
   refs.listArticle.innerHTML = ' ';
   refs.listWatch.innerHTML = ' ';
+  refs.watcheBtn.classList.remove('nav-btn-active');
+  refs.queueBtn.classList.add('nav-btn-active');
   refs.searchInput.classList.add('hidden');
   refs.paginationBox.classList.add('hidden');
   refs.navBtns.classList.remove('hidden');

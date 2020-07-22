@@ -380,3 +380,18 @@ main {
   width: 150px;
   margin: 0 auto;
 }
+
+.nav-btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 16px;
+  width: 140px;
+  height: 40px;
+}
+
+.nav-btn-active {
+  background-color: #77c1bb;
+  color: #fff;
+}
